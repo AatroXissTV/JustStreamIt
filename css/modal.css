@@ -56,13 +56,28 @@
   .modal_body{  
     margin: 0;
   }
-  
 
   .modal_container{
-      width: 40%;
-      margin-left: 6%;
       height: 100%;
-      color: red;
+      display: table;
+  }
+
+  .modal_l_container{
+    width: 40%;
+    margin-left: 6%;
+    height: 100%;
+    display: table;
+    background-color: #ff9e2c;
+    position: absolute;
+    left: 0px;
+  }
+
+  .modal_r_container{
+    background-color: #b6701e;
+    position: absolute;
+    right: 0px;
+    width: 40%;
+    margin-right: 6%;
   }
 
   .modal_title{
