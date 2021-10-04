@@ -19,14 +19,14 @@
             </ul>
         </div>
     </nav>
-    <div class="carousel_container">
-        <div class="carousel">
-            <div class="slider">
-                <div class="slide_content">
+    <div class="header_container">
+        <div class="header">
+            <div class="main_img">
+                <div class="header_content">
                     <h1 class="movie_title">Raya and the last dragon</h1>
                     <p class="movie_description">Humans and dragons lived in harmony in the kingdom of Kumandra, until an evil force descended upon the kingdom. The dragons sacrificed themselves to save humanity. When this force reappears five centuries later, Raya, a lone warrior, sets out to find the last dragon to restore harmony to the now divided Kumandra. </p>
                     <button class="play_btn"><i class="fas fa-play"></i>Play</button>
-                    <button class="info_btn"><i class="fas fa-info-circle"></i></button>
+                    <button class="info_btn" id="myBtn"><i class="fas fa-info-circle"></i></button>
                 </div>
                 <img src="images/main.png" alt="" style="position:absolute; z-index: 1;">
                 <img src="images/fade.png" alt="" style="position: absolute; z-index: 2;">
@@ -68,6 +68,27 @@
                 </div>
         </div>
     </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal_content">
+            <div class="modal_header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal_body">
+                <div class="modal_container">
+                    <h2 class="modal_title">Raya and the last dragon</h2>
+                    <p class="modal_info">Animation - 2021 - 1h47min</p>
+                    <p class="modal_rating">75 metascore - 7,4/10</p>
+                    <p class="movie_description">Humans and dragons lived in harmony in the kingdom of Kumandra, until an evil force descended upon the kingdom. The dragons sacrificed themselves to save humanity. When this force reappears five centuries later, Raya, a lone warrior, sets out to find the last dragon to restore harmony to the now divided Kumandra. </p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
     <script src="js/card_slider.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>
