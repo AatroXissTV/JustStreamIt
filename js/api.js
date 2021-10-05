@@ -1,23 +1,19 @@
-const url = 'http://localhost:8000/api/v1/';
+// This file manages the function required to call the API.
 
-fetch(`${url}titles/`)
-    .then(function(res){
-        if (res.ok) {
-            data = res.json()
-            return data;
+function fetchAndDecode(url) {
+    return fetch(url)
+    .then(function(response) {
+        if (response.status !== 200) {
+            console.log('Looks like there was a problem. Status Code: ' +
+            response.status);
+        } else {
+            return response.json()
         }
     })
-
-fetch(`${url}titles/499549`)
-    .then(function(res){
-        if (res.ok) {
-            data = res.json()
-            return data;
-        }
+    .catch(err => {
+        console.log(`Error with fetched url: ${url}` + err.message)
     })
-    .then(data => {
-        movie_t.textContent = "";
-        movie_t.textContent = `${data.original_title}`;
-        movie_des.textContent = "";
-        movie_des.textContent = `${data.description}`;
+    .finally(() => {
+        console.log(`Succeed fetched url: ${url}`)
     })
+}

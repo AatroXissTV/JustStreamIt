@@ -1,2 +1,17 @@
 ### Git Ignore Just Stream It ###
 /OCMovies-API-EN-FR
+
+### vscode ###
+/.vscode
+
+### node_modules ###
+/node_modules
+
+### packages ###
+/package.json
+/package-lock.json
+
+### tests ###
+/test.html
+/test.mjs
+/test_exercice.js

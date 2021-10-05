@@ -138,14 +138,17 @@
     .modal_style > .modal_content > .modal_container > .modal_left > .modal_title{
         font-size: 40px;
     }
+
+    .modal_style > .modal_content > .modal_header{
+      margin-top: 8%;
+  }
 }
 
 @media (max-width:768px) {
 
     .modal_style > .modal_content > .modal_header{
-        margin-top: 15%;
-    }
-
+      margin-top: 15%;
+  }
     .modal_style > .modal_content > .modal_container > .modal_left > .text{
         font-size: 15px;
     }
