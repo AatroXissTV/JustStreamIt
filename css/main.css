@@ -1,7 +1,14 @@
 /* Main CSS file for Just Stream it */
-@import url(components.css);
-@import url(header.css);
+
+/* Import fonts*/
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/* Import all CSS files */
 @import url(navbar.css);
+@import url(components.css);
+@import url(main_container.css);
+@import url(card_container.css);
 @import url(modal.css);
 
 /* Style reset */
@@ -17,4 +24,5 @@ body{
     background: #000;
     position: relative;
     font-family: 'Bitter', serif;
+    color: #fff;
 }

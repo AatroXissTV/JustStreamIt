@@ -3,40 +3,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <script src="https://kit.fontawesome.com/cb69a51d2a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>Just Stream It</title>
 </head>
 <body>
     <nav class="navbar">
-        <img src="images/logo.png" class="brand_logo" alt="">
-        <div class="right_container">
-            <ul class="nav_links">
-                <li class="nav_items"><a href="#">Home</a></li>
-                <li class="nav_items"><a href="#">Categories</a></li>
-            </ul>
+        <input type="checkbox" id="nav_check">
+        <div class="nav_header">
+            <img src="images/logo.png" alt="" class="nav_logo">
+        </div>
+        <div class="nav_btn">
+          <label for="nav_check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav_links">
+          <a href="#">Home</a>
+          <a href="#">Categories</a>
         </div>
     </nav>
-    <div class="header_container">
-        <div class="header">
+
+    <div class="main_container">
+        <div class="main">
             <div class="main_img">
-                <div class="header_content">
-                    <h1 class="movie_title">Raya and the last dragon</h1>
-                    <p class="movie_description">Humans and dragons lived in harmony in the kingdom of Kumandra, until an evil force descended upon the kingdom. The dragons sacrificed themselves to save humanity. When this force reappears five centuries later, Raya, a lone warrior, sets out to find the last dragon to restore harmony to the now divided Kumandra. </p>
+                <div class="main_content">
+                    <h1 id="movie_title">Raya and the last dragon</h1>
+                    <p id="movie_description">Humans and dragons lived in harmony in the kingdom of Kumandra, until an evil force descended upon the kingdom. The dragons sacrificed themselves to save humanity. When this force reappears five centuries later, Raya, a lone warrior, sets out to find the last dragon to restore harmony to the now divided Kumandra. </p>
                     <button class="play_btn"><i class="fas fa-play"></i>Play</button>
-                    <button class="info_btn" id="myBtn"><i class="fas fa-info-circle"></i></button>
+                    <button class="info_btn" id="callModal"><i class="fas fa-info-circle"></i></button>
                 </div>
-                <img src="images/main.png" alt="" style="position:absolute; z-index: 1;">
-                <img src="images/fade.png" alt="" style="position: absolute; z-index: 2;">
+                <img src="images/main.png" alt="" id="main_img">
+                <img src="images/fade.png" alt="" id="fade_img">
             </div>
         </div>
     </div>
+    
     <div class="cards_container">
         <h2 class="cards_title">Best Rated</h2>
         <div class="movies_list">
-            <button class="pre_btn"><img src="images/pre.png" alt=""></button>
+            <button class="pre_btn"><img src="images/pre.png" alt="images"></button>
             <button class="next_btn"><img src="images/nxt.png" alt=""></button>
             <div class="card_container">
                 <div class="card">
@@ -66,33 +74,39 @@
                 <div class="card">
                     <img src="images/jamesbond.jpg" alt="" class="card_img">
                 </div>
+            </div>
         </div>
     </div>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
 
-        <!-- Modal content -->
+    <!-- The modal-->
+    <div id="modal" class="modal_style">
+        <!-- Modal content-->
         <div class="modal_content">
             <div class="modal_header">
                 <span class="close">&times;</span>
             </div>
-            <div class="modal_body">
-                <div class="modal_container">
-                    <div class="modal_l_container">
-                        <h2 class="modal_title">Raya and the last dragon</h2>
-                        <p class="modal_info">Animation - 2021 - 1h47min</p>
-                        <p class="modal_rating">75 metascore - 7,4/10</p>
-                        <p class="movie_description">Humans and dragons lived in harmony in the kingdom of Kumandra, until an evil force descended upon the kingdom. The dragons sacrificed themselves to save humanity. When this force reappears five centuries later, Raya, a lone warrior, sets out to find the last dragon to restore harmony to the now divided Kumandra. </p>
-                    </div>
-                    <div class="modal_r_container">
-                        <p>TEST</p>
-                    </div>
+            <div class="modal_container">
+                <div class="modal_left">
+                    <h2 class="modal_title">Raya and the last dragon</h2>
+                    <p class="movie_infos">Animation - 2021 - 1h47min</p>
+                    <p class="movie_infos">America - Box Office results: 50 000 000</p>
+                    <p class="movie_rating">75 metascore - 7,4/10</p>
+                    <h3 class="modal_subtitle">Synopsis</h3>
+                    <p class="text">Humans and dragons lived in harmony in the kingdom of Kumandra, until an evil force descended upon the kingdom. The dragons sacrificed themselves to save humanity. When this force reappears five centuries later, Raya, a lone warrior, sets out to find the last dragon to restore harmony to the now divided Kumandra. </p>
+                    <h3 class="modal_subtitle">Cast & crew</h3>
+                    <p class="text">Directed by: Don Hall, Carlos López Estrada, Paul Briggs, John Ripa</p>
+                    <p class="text">Liste de tous les acteurs du film</p>
+                    <button class="play_btn"><i class="fas fa-play"></i>Play</button>
+                </div>
+                <div class="modal_right">
+                    <img src="images/raya.jpg" alt="">
                 </div>
             </div>
         </div>
-    
+
     </div>
 
+    <script src="https://kit.fontawesome.com/cb69a51d2a.js" crossorigin="anonymous"></script>
     <script src="js/card_slider.js"></script>
     <script src="js/modal.js"></script>
 </body>

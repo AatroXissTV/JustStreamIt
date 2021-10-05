@@ -1,122 +1,166 @@
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    -webkit-animation-name: fadeIn; /* Fade in the background */
-    -webkit-animation-duration: 0.4s;
+/* Modal CSS*/
+
+.modal_style {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 0.2s;
     animation-name: fadeIn;
-    animation-duration: 0.4s;
-    z-index: 4; /* Sit on top */
+    animation-duration: 0.2s;
+    z-index: 4;
   }
   
-  /* Modal Content */
-  .modal_content {
+  .modal_style > .modal_content {
     width: 100%;
     height: 100%;
     position: fixed;
     bottom: 0;
     background-color: #000;
     -webkit-animation-name: slideIn;
-    -webkit-animation-duration: 0.4s;
+    -webkit-animation-duration: 0.7s;
     animation-name: slideIn;
-    animation-duration: 0.4s
+    animation-duration: 0.7s
   }
-  
-  /* The Close Button */
-  .close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .modal_header {
+
+  .modal_style > .modal_content > .modal_header {
     margin-top: 6%;
     margin-left: 6%;
     margin-right: 6%;
     height: 30px;
-    background-color: #000;
-    color: white;
-  }
-  
-  .modal_body{  
-    margin: 0;
   }
 
-  .modal_container{
-      height: 100%;
-      display: table;
+  .modal_style > .modal_content > .modal_header > .close{
+      float: right;
+      font-size: 30px;
+      font-weight: bold;
   }
 
-  .modal_l_container{
-    width: 40%;
-    margin-left: 6%;
+  .modal_style > .modal_content > .modal_container{
+    width: 100%;
     height: 100%;
     display: table;
-    background-color: #ff9e2c;
+  }
+
+  .modal_style > .modal_content > .modal_container > .modal_left{
+    width: 50%;
+    margin-left: 6%;
+    margin-right: 6%;
+    height: 100%;
+    display: table;
     position: absolute;
     left: 0px;
   }
 
-  .modal_r_container{
-    background-color: #b6701e;
-    position: absolute;
-    right: 0px;
-    width: 40%;
-    margin-right: 6%;
-  }
-
-  .modal_title{
+  .modal_style > .modal_content > .modal_container > .modal_left > .modal_title{
     text-transform: uppercase;
-    margin-top: 40px;
-    margin-bottom: 10px;
     font-family: 'Open Sans';
-    font-size: 60px;
+    font-size: 55px;
     font-weight: bolder;  
+    margin-bottom: 20px;
     color: #fff;
   }
 
-  .modal_info{
-      font-size: 20px;
-      color: #E1E1E0;
+  .modal_style > .modal_content > .modal_container > .modal_left > .movie_infos{
+    font-size: 15px;
+    color: #E1E1E0
   }
 
-  .modal_rating{
-      font-size: 20px;
-      color: seagreen;
+  .modal_style > .modal_content > .modal_container > .modal_left > .movie_rating{
+    font-size: 15px;
+    color: seagreen
   }
 
-  /* Add Animation */
-  @-webkit-keyframes slideIn {
-    from {bottom: -300px; opacity: 0} 
-    to {bottom: 0; opacity: 1}
+  .modal_style > .modal_content > .modal_container > .modal_left > .modal_subtitle{
+    text-transform: uppercase;
+    font-family: 'Open Sans';
+    font-size: 20px;
+    font-weight: bolder;  
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: #fff;
+  }
+
+  .modal_style > .modal_content > .modal_container > .modal_right{
+    position: absolute;
+    max-width: 40%;
+    right: 0px;
+    height: 70%;
+    margin-right: 6%;
   }
   
-  @keyframes slideIn {
-    from {bottom: -300px; opacity: 0}
-    to {bottom: 0; opacity: 1}
+
+  .modal_style > .modal_content > .modal_container > .modal_right img{
+      max-width: 100%;
+      max-height: 100%;
   }
-  
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0} 
-    to {opacity: 1}
-  }
+
+
+    /* Add Animation */
+    @-webkit-keyframes slideIn {
+        from {bottom: -300px; opacity: 0} 
+        to {bottom: 0; opacity: 1}
+      }
+      
+      @keyframes slideIn {
+        from {bottom: -300px; opacity: 0}
+        to {bottom: 0; opacity: 1}
+      }
+      
+      @-webkit-keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fadeIn {
+        from {opacity: 0} 
+        to {opacity: 1}
+      }
+
+/* Media Queries*/
+/* Mobile => 480px Tablet => 768px Small laptop => 1024px  Desktops => 1200px*/
+
+@media (max-width:1200px) {
+
+    .modal_style > .modal_content > .modal_container > .modal_left{
+        width: 40%;
+    }
+    .modal_style > .modal_content > .modal_container > .modal_right{
+        width: 35%;
+    }
+}
+
+
+@media (max-width:1024px) {
+
+    .modal_style > .modal_content > .modal_container > .modal_left > .modal_title{
+        font-size: 40px;
+    }
+}
+
+@media (max-width:768px) {
+
+    .modal_style > .modal_content > .modal_header{
+        margin-top: 15%;
+    }
+
+    .modal_style > .modal_content > .modal_container > .modal_left > .text{
+        font-size: 15px;
+    }
+}
+
+@media (max-width:700px) {
+
+    .modal_style > .modal_content > .modal_container > .modal_right{
+        display: none;
+    }
+
+    .modal_style > .modal_content > .modal_container > .modal_left{
+        width: 80%;
+        margin-left: 6%;
+        margin-right: 6%;
+    
+    }
+}

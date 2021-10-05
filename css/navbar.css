@@ -1,37 +1,114 @@
-/* Navbar is a main components */
-.navbar{
+/* Navbar CSS*/
+
+.navbar {
+    position: fixed;
+    z-index: 10;
+    display: flex;
     width: 100%;
     height: 80px;
-    top: 0;
-    left: 0;
     padding: 0 1%;
-    align-items: center;
-    display: flex;
-    position: fixed;
     background-image: linear-gradient(#000, transparent);
-    z-index: 10;
-}
-
-.brand_logo{
-    height: 70px;
-}
-
-.right_container{
-    margin-left: auto;
-    margin-right: 6%;
-    display: block;
-}
-
-.nav_links{
-    margin-top: 10px;
-    list-style: none;
-    display: flex;
-}
-
-.nav_items a{
+    align-items: center;
+  }
+  
+  .navbar > .nav_header {
+    display: inline;
+  }
+  
+  .navbar > .nav_header > .nav_logo {
+      height: 70px;
+  }
+  
+  .navbar > .nav_btn {
+    display: none;
+  }
+  
+  .navbar > .nav_links {
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    font-size: 18px;
+  }
+  
+  .navbar > .nav_links > a {
+    display: inline-block;
+    padding: 20px 40px 20px 10px;
     text-decoration: none;
-    margin-left: 20px;
     text-transform: capitalize;
+    text-align: right;
     color: #fff;
-    opacity: .9;
-}
+  }
+  
+  .navbar > .nav_links > a:hover {
+    color: #E5383B
+  }
+  
+  .navbar > #nav_check {
+    display: none;
+  }
+  
+
+  /* Media Queries*/
+  /* Mobile => 768px Small laptop and tablets => 1024*/
+
+  @media (max-width:1024px) {
+
+    .navbar > .nav_header > .nav_logo {
+        height: 55px;
+    }
+  }
+
+  @media (max-width:768px) {
+
+    .navbar{
+        background-color: #000;
+    }
+
+    .navbar > .nav_header > .nav_logo {
+        height: 50px;
+    }
+
+    .navbar > .nav_btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 10px;
+    }
+    .navbar > .nav_btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .navbar > .nav_btn > label:hover,.nav  #nav_check:checked ~ .nav_btn > label {
+      background-color: #141414;
+    }
+    .navbar > .nav_btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .navbar > .nav_links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #141414;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 80px;
+      left: 0px;
+    }
+    .navbar > .nav_links > a {
+      display: block;
+      width: 100%;
+    }
+    .navbar > #nav_check:not(:checked) ~ .nav_links {
+      height: 0px;
+    }
+    .navbar > #nav_check:checked ~ .nav_links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
