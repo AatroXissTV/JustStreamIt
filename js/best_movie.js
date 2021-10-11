@@ -6,7 +6,7 @@ const url = "http://localhost:8000/api/v1/"
 // GET /api/v1/titles/?year=&min_year=&max_year=&imdb_score=&imdb_score_min=&imdb_score_max=&title=&title_contains=&genre=&genre_contains=&sort_by=-imdb_score&director=&director_contains=&writer=&writer_contains=&actor=&actor_contains=&country=&country_contains=&lang=&lang_contains=&company=&company_contains=&rating=&rating_contains= HTTP/1.1" 200 24341
 
 // Initialize API request url
-let best_movies_url = `${url}titles/?format=json&sort_by=-imdb_score`
+let best_movies_url = `${url}titles/?format=json&sort_by=-imdb_score,-votes&lang_contains=English&page_size=7`
 
 getBestMoviesList(best_movies_url);
 
@@ -38,5 +38,5 @@ function displayBestMovie(movie) {
     let movie_description = document.getElementById("movie_description")
 
     movie_title.innerHTML = movie.title
-    movie_description.innerHTML = movie.long_description
+    movie_description.innerHTML = movie.description
 }

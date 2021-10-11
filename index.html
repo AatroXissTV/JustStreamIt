@@ -22,7 +22,7 @@
         
         <div class="nav_links">
           <a href="#">Home</a>
-          <a href="#">Categories</a>
+          <a href="#cards1">Categories</a>
         </div>
     </nav>
 
@@ -30,8 +30,8 @@
         <div class="main">
             <div class="main_img">
                 <div class="main_content">
-                    <h1 id="movie_title">Raya and the last dragon</h1>
-                    <p id="movie_description">Humans and dragons lived in harmony in the kingdom of Kumandra, until an evil force descended upon the kingdom. The dragons sacrificed themselves to save humanity. When this force reappears five centuries later, Raya, a lone warrior, sets out to find the last dragon to restore harmony to the now divided Kumandra. </p>
+                    <h1 id="movie_title"></h1>
+                    <p id="movie_description"></p>
                     <button class="play_btn"><i class="fas fa-play"></i>Play</button>
                     <button class="info_btn" id="callModal"><i class="fas fa-info-circle"></i></button>
                 </div>
@@ -46,34 +46,49 @@
         <div class="movies_list">
             <button class="pre_btn"><img src="images/pre.png" alt="images"></button>
             <button class="next_btn"><img src="images/nxt.png" alt=""></button>
-            <div class="card_container">
-                <div class="card">
-                    <img src="images/fordvsferrari.jpg" alt="" class="card_img">
-                </div>
-                <div class="card">
-                    <img src="images/thegentlement.jpg" alt="" class="card_img">
-                </div>
-                <div class="card">
-                    <img src="images/tombraider.jpg" alt="" class="card_img">
-                </div>
-                <div class="card">
-                    <img src="images/rogueone.jpg" alt="" class="card_img">
-                </div>
-                <div class="card">
-                    <img src="images/spiderman.jpg" alt="" class="card_img">
-                </div>
-                <div class="card">
-                    <img src="images/soul.jpg" alt="" class="card_img">
-                </div>
-                <div class="card">
-                    <img src="images/whiplash.jpg" alt="" class="card_img">
-                </div>
-                <div class="card">
-                    <img src="images/frozen.jpg" alt="" class="card_img">
-                </div>
-                <div class="card">
-                    <img src="images/jamesbond.jpg" alt="" class="card_img">
-                </div>
+            <div class="card_container" id="container0">
+                <!--<div class="card">
+                    <img src="images/fordvsferrari.jpg" alt="" class="card_img" id="">
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="cards_container cards_categories">
+        <h2 class="cards_title">Animation</h2>
+        <div class="movies_list">
+            <button class="pre_btn"><img src="images/pre.png" alt="images"></button>
+            <button class="next_btn"><img src="images/nxt.png" alt=""></button>
+            <div class="card_container" id="container1">
+            <!--<div class="card">
+                    <img src="images/thegentlement.jpg" alt="" class="card_img" id="">
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="cards_container cards_categories">
+        <h2 class="cards_title">Action</h2>
+        <div class="movies_list">
+            <button class="pre_btn"><img src="images/pre.png" alt="images"></button>
+            <button class="next_btn"><img src="images/nxt.png" alt=""></button>
+            <div class="card_container" id="container2">
+                <!--<div class="card">
+                    <img src="images/tombraider.jpg" alt="" class="card_img" id="">
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="cards_container cards_categories">
+        <h2 class="cards_title">Adventure</h2>
+        <div class="movies_list">
+            <button class="pre_btn"><img src="images/pre.png" alt="images"></button>
+            <button class="next_btn"><img src="images/nxt.png" alt=""></button>
+            <div class="card_container" id="container3">
+                <!--<div class="card">
+                    <img src="images/jamesbond.jpg" alt="" class="card_img" id="">
+                </div> -->
             </div>
         </div>
     </div>
@@ -111,6 +126,6 @@
     <script src="js/card_slider.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/best_movie.js"></script>
-    <script src="js/best_rated.js"></script>
+    <script src="js/categories.js"></script>
 </body>
 </html>

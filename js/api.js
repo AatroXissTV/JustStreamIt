@@ -11,9 +11,9 @@ function fetchAndDecode(url) {
         }
     })
     .catch(err => {
-        console.log(`Error with fetched url: ${url}` + err.message)
+        console.log(`Error: ${url}` + err.message)
     })
     .finally(() => {
-        console.log(`Succeed fetched url: ${url}`)
+        console.log(`Success: ${url}`)
     })
 }

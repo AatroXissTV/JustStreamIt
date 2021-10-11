@@ -1,4 +1,8 @@
 /* Card container CSS*/
+.cards_categories {
+    margin-top: 0px !important;
+}
+
 .cards_container{
     position: relative;
     width: 100%;
