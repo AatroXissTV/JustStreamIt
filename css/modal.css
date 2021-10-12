@@ -1,4 +1,4 @@
-/* Modal CSS*/
+/* Modal CSS for Just Stream It*/
 
 .modal_style {
     display: none;
@@ -118,6 +118,7 @@
         from {opacity: 0} 
         to {opacity: 1}
       }
+
 
 /* Media Queries*/
 /* Mobile => 480px Tablet => 768px Small laptop => 1024px  Desktops => 1200px*/

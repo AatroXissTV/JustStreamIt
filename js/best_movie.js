@@ -37,6 +37,7 @@ function displayBestMovie(movie) {
     let movie_title = document.getElementById("movie_title")
     let movie_description = document.getElementById("movie_description")
 
-    movie_title.innerHTML = movie.title
-    movie_description.innerHTML = movie.description
+    movie_title.innerHTML = movie.title;
+    movie_title.className = movie.id;
+    movie_description.innerHTML = movie.description;
 }

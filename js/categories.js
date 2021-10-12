@@ -2,7 +2,8 @@
 // This file manages the function and script required to display informations to the cards_container.
 
 // Definition of variables
-let categories_list = ["", "animation", "action", "adventure"]
+const number_of_movies = 20
+let categories_list = ["", "animation", "action", "sci-fi"]
 let categories_urls = get_categories_urls(categories_list)
 
 
@@ -11,7 +12,7 @@ let categories_urls = get_categories_urls(categories_list)
 function get_categories_urls(categories_list) {
     let urls = [];
     for (category of categories_list) {
-        urls.push(`http://localhost:8000/api/v1/titles/?format=json&genre=${category}&sort_by=-imdb_score&lang_contains=English&page_size=7`)
+        urls.push(`http://localhost:8000/api/v1/titles/?format=json&genre=${category}&sort_by=-imdb_score&lang_contains=English&page_size=${number_of_movies}`)
     }
     return urls
 }
