@@ -24,7 +24,6 @@ function getBestMoviesList(url) {
 function getBestMovieData(url) {
     best_movie_data = fetchAndDecode(url);
     best_movie_data.then(movie => {
-        console.log(movie);
         displayBestMovie(movie);
     });
 }

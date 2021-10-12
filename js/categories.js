@@ -2,7 +2,7 @@
 // This file manages the function and script required to display informations to the cards_container.
 
 // Definition of variables
-const number_of_movies = 20
+const number_of_movies = 15
 let categories_list = ["", "animation", "action", "sci-fi"]
 let categories_urls = get_categories_urls(categories_list)
 
@@ -47,7 +47,7 @@ function displayMovies(movies, i) {
     for (movie of movies) {
         let html = `
         <div class="card">
-            <img src="${movie.image_url}" alt="" class="card_img" id="${movie.id}">
+            <img src="${movie.image_url}" alt="" class="card_img" id="${movie.id}" onclick="onClick(this)">
         </div>
         `
         document.getElementById(`container${i}`).innerHTML += html

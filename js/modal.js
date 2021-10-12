@@ -16,3 +16,38 @@ btn.onclick = function() {
 span.onclick = function() {
   modal.style.display = "none";
 }
+
+// Modal for card sliders
+function onClick(element) {
+  document.getElementById("modal_img").src = element.src;
+  id = element.id
+  let movie_url = `${url}titles/${id}`
+  getMovieData(movie_url)
+
+  document.getElementById("modal").style.display = "block";
+}
+
+function getMovieData(url) {
+  movie_data = fetchAndDecode(url);
+  movie_data.then(movie => {
+    displayMovieModal(movie);
+  });
+}
+
+function displayMovieModal(movie) {
+  let modal_title = document.getElementById("modal_title")
+  let modal_infos = document.getElementById("modal_infos")
+  let modal_infos_2 = document.getElementById("modal_infos_2")
+  let modal_rating = document.getElementById("modal_rating")
+  let modal_description = document.getElementById("modal_description")
+  let modal_director = document.getElementById("modal_director")
+  let modal_actors = document.getElementById("modal_actors")
+
+  modal_title.innerHTML = movie.original_title;
+  modal_infos.innerHTML = `${movie.genres} - ${movie.year} - ${movie.duration}`
+  modal_infos_2.innerHTML = `${movie.countries} - ${movie.worldwide_gross_income}`
+  modal_rating.innerHTML = `${movie.avg_vote} - IMDB:${movie.imdb_score}`
+  modal_description.innerHTML = `${movie.long_description}`
+  modal_director.innerHTML = `${movie.directors}`
+  modal_actors.innerHTML = `${movie.actors}`
+}
