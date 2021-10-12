@@ -1,0 +1,94 @@
+/* css basic layout for just stream it */
+
+/* ============  Navbar  ================ */
+/* css for navbar */
+.navbar {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    padding: 0 4%;
+    background-image: linear-gradient(#000, transparent);
+    align-items: center;
+}
+
+.navbar > .nav_left > .nav_logo {
+    display: inline;
+    height: 70px;
+}
+
+.navbar > #nav_check {
+    display: none;
+}
+
+.navbar > .nav_btn {
+    display: none;
+}
+
+.navbar > .nav_links {
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+}
+
+.navbar > .nav_links > a {
+    padding: 20px 40px 20px 10px;
+    font-size: var(--medium2-font-size);
+    font-weight: bolder;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.navbar > .nav_links > a:hover {
+    color: var(--complementary-color)
+}
+
+
+/* ============  Best Movie  ================ */
+/* css for navbar */
+.best_movie_container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+}
+
+.best_movie_container > .best_movie > .best_movie_img > .best_movie_content {
+    position: absolute;
+    z-index: 3;
+    width: 40%;
+    height: 80%;
+    padding-top: 100px;
+    padding-left: 10%;
+}
+
+.best_movie_container > .best_movie > .best_movie_img > .best_movie_content > #best_movie_title {
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.best_movie_container > .best_movie > .best_movie_img > .best_movie_content > #best_movie_description {
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.best_movie_container > .best_movie > .best_movie_img img{
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    margin-left: auto;
+}
+
+.best_movie_container > .best_movie > .best_movie_img > #main_img{
+    position: absolute;
+    z-index: 1;
+}
+
+.best_movie_container > .best_movie > .best_movie_img > #fade_img{
+    position: absolute;
+    z-index: 2;
+}

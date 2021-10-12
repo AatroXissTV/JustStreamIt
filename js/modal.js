@@ -7,11 +7,6 @@ var btn = document.getElementById("callModal");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
@@ -44,10 +39,10 @@ function displayMovieModal(movie) {
   let modal_actors = document.getElementById("modal_actors")
 
   modal_title.innerHTML = movie.original_title;
-  modal_infos.innerHTML = `${movie.genres} - ${movie.year} - ${movie.duration}`
-  modal_infos_2.innerHTML = `${movie.countries} - ${movie.worldwide_gross_income}`
-  modal_rating.innerHTML = `${movie.avg_vote} - IMDB:${movie.imdb_score}`
+  modal_infos.innerHTML = `Genres: ${movie.genres} - ${movie.year} - ${movie.duration}`
+  modal_infos_2.innerHTML = `Country: ${movie.countries} - Box office result: ${movie.worldwide_gross_income}`
+  modal_rating.innerHTML = `Average rating: ${movie.avg_vote} - IMDB score: ${movie.imdb_score}`
   modal_description.innerHTML = `${movie.long_description}`
-  modal_director.innerHTML = `${movie.directors}`
-  modal_actors.innerHTML = `${movie.actors}`
+  modal_director.innerHTML = `Directed by: ${movie.directors}`
+  modal_actors.innerHTML = `All actors: ${movie.actors}`
 }

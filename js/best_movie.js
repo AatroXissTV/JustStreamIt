@@ -33,10 +33,9 @@ function getBestMovieData(url) {
 // Once all the data are loaded, the block is displayed to the screen.
 
 function displayBestMovie(movie) {
-    let movie_title = document.getElementById("movie_title")
-    let movie_description = document.getElementById("movie_description")
+    let movie_title = document.getElementById("best_movie_title")
+    let movie_description = document.getElementById("best_movie_description")
 
     movie_title.innerHTML = movie.title;
-    movie_title.className = movie.id;
     movie_description.innerHTML = movie.description;
 }

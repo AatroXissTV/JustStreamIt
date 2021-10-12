@@ -1,46 +1,53 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <title>Just Stream It</title>
+    <!--master css -->
+    <link rel="stylesheet" href="css/master.css">
+    <!--boxicons link -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Just Stream It - OCProject</title>
 </head>
+
 <body>
+
+    <!--navbar for just stream it -->
     <nav class="navbar">
         <input type="checkbox" id="nav_check">
-        <div class="nav_header">
+        <div class="nav_left">
             <img src="images/logo.png" alt="" class="nav_logo">
         </div>
         <div class="nav_btn">
-          <label for="nav_check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
+            <label for="nav_check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
         </div>
-        
         <div class="nav_links">
-          <a href="#">Home</a>
-          <a href="#container0">Categories</a>
+            <a href="#">Home</a>
+            <a href="#container0">Categories</a>
         </div>
     </nav>
 
-    <div class="main_container">
-        <div class="main">
-            <div class="main_img">
-                <div class="main_content">
-                    <h1 id="movie_title"></h1>
-                    <p id="movie_description"></p>
-                    <button class="play_btn"><i class="fas fa-play"></i>Play</button>
-                    <button class="info_btn" id="callModal"><i class="fas fa-info-circle"></i></button>
+    <!--best movie container -->
+    <div class="best_movie_container">
+        <div class="best_movie">
+            <div class="best_movie_img">
+                <div class="best_movie_content">
+                    <h1 id="best_movie_title">Hopeful Notes</h1>
+                    <p id="best_movie_description">A young violinist with leukemia brings hope and life into a desolate Russian hospital for children.</p>
+                    <button class="play_btn">Play</button>
+                    <button class="info_btn" onclick="onClick(this)" id="1508669">More informations</button>
                 </div>
                 <img src="images/hopefulnote.jpg" alt="" id="main_img">
                 <img src="images/fade.png" alt="" id="fade_img">
             </div>
         </div>
     </div>
-    
+
     <div class="cards_container">
         <h2 class="cards_title">Best Rated</h2>
         <div class="movies_list">
@@ -93,38 +100,39 @@
         </div>
     </div>
 
-    <!-- The modal-->
-    <div id="modal" class="modal_style">
-        <!-- Modal content-->
-        <div class="modal_content">
-            <div class="modal_header">
-                <span class="close">&times;</span>
-            </div>
-            <div class="modal_container">
-                <div class="modal_left">
-                    <h2 class="modal_title" id="modal_title"></h2>
-                    <p class="movie_infos" id="modal_infos"></p>
-                    <p class="movie_infos" id="modal_infos_2"></p>
-                    <p class="movie_rating" id="modal_rating"></p>
-                    <h3 class="modal_subtitle">Synopsis</h3>
-                    <p class="text" id="modal_description"></p>
-                    <h3 class="modal_subtitle">Cast & crew</h3>
-                    <p class="text" id="modal_director"></p>
-                    <p class="text" id="modal_actors">Liste de tous les acteurs du film</p>
-                    <button class="play_btn"><i class="fas fa-play"></i>Play</button>
+        <!-- The modal-->
+        <div id="modal" class="modal_style">
+            <!-- Modal content-->
+            <div class="modal_content">
+                <div class="modal_header">
+                    <span class="close">&times;</span>
                 </div>
-                <div class="modal_right">
-                    <img src="images/raya.jpg" id="modal_img" alt="">
+                <div class="modal_container">
+                    <div class="modal_left">
+                        <h2 class="modal_title" id="modal_title"></h2>
+                        <p class="movie_infos" id="modal_infos"></p>
+                        <p class="movie_infos" id="modal_infos_2"></p>
+                        <p class="movie_rating" id="modal_rating"></p>
+                        <h3 class="modal_subtitle">Synopsis</h3>
+                        <p class="text" id="modal_description"></p>
+                        <h3 class="modal_subtitle">Cast & crew</h3>
+                        <p class="text" id="modal_director"></p>
+                        <p class="text" id="modal_actors">Liste de tous les acteurs du film</p>
+                        <button class="play_btn">Play</button>
+                    </div>
+                    <div class="modal_right">
+                        <img src="images/raya.jpg" id="modal_img" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
 
-    </div>
+    <!-- all scripts -->
     <script src="js/api.js"></script>
-    <script src="https://kit.fontawesome.com/cb69a51d2a.js" crossorigin="anonymous"></script>
     <script src="js/card_slider.js"></script>
-    <script src="js/modal.js"></script>
     <script src="js/best_movie.js"></script>
     <script src="js/categories.js"></script>
+    <script src="js/modal.js"></script>
+    
 </body>
+
 </html>

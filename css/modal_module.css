@@ -1,0 +1,102 @@
+/* Modal module css */
+/* css independent from rest of css except master.css*/
+
+.modal_style {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  overflow: auto;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.2s;
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_style > .modal_content {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.7s;
+  animation-name: slideIn;
+  animation-duration: 0.7s;
+  background-color: var(--dominant-color);
+}
+
+.modal_style > .modal_content > .modal_header {
+  margin: 6% 6% 3% 6%;
+  height: 30px;
+}
+
+.modal_style > .modal_content > .modal_header > .close {
+  float: right;
+  font-size: var(--medium-font-size);
+  font-weight: bolder;
+  color: var(--white-color);
+}
+
+.modal_style > .modal_content > .modal_container {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.modal_style > .modal_content > .modal_container > .modal_left{
+  width: 50%;
+  margin-left: 6%;
+  margin-right: 6%;
+  height: 100%;
+  display: table;
+  position: absolute;
+  left: 0px;
+}
+
+.modal_style > .modal_content > .modal_container > .modal_left > .modal_title {
+  margin-bottom: 20px;
+}
+
+.modal_style > .modal_content > .modal_container > .modal_left > .movie_infos {
+  color: var(--light-grey-color);
+}
+
+.modal_style > .modal_content > .modal_container > .modal_left > .movie_rating {
+  color: var(--accent-color)
+}
+
+.modal_style > .modal_content > .modal_container > .modal_right{
+  position: absolute;
+  max-width: 40%;
+  right: 0px;
+  height: 70%;
+  margin-right: 6%;
+}
+
+
+.modal_style > .modal_content > .modal_container > .modal_right img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Animation of modal */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0} 
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}

@@ -1,0 +1,76 @@
+/* files managing utils css (buttons) */
+
+.play_btn {
+    width: 30%;
+    height: 40px;
+    margin-top: 40px;
+    margin-right: 20px;
+    background: var(--complementary-color);
+    color: var(--white-color);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    font-size: var(--medium2-font-size);
+    font-weight: bolder;
+    border: none;
+    outline: none;
+}
+
+.play_btn:hover {
+    background: var(--light-grey-color);
+    color: var(--dark-grey-color);
+}
+
+.info_btn {
+    width: 60%;
+    height: 40px;
+    background: var(--light-grey-color);
+    color: var(--dark-grey-color);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    font-size: var(--normal-font-size);
+    font-weight: bolder;
+    border: none;
+    outline: none;
+}
+
+.info_btn:hover {
+    background: var(--dark-grey-color);
+    color: var(--white-color);
+}
+
+/* PRE & NEXT buttons for card slider */
+.pre_btn,
+.next_btn{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 5%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.pre_btn{
+    left: 0;
+    background: var(--black-color);
+}
+
+.next_btn{
+    right: 0;
+    background: var(--black-color);
+}
+
+.pre_btn img,
+.next_btn img{
+    width: 15px;
+    height: 20px;
+    opacity: 0;
+}
+
+.pre_btn:hover img,
+.next_btn:hover img{
+    opacity: 1;
+}

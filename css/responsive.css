@@ -1,0 +1,99 @@
+/* file managing responsive for just stream it */
+
+/* mobile => 768px*/
+/* Small laptop => 1024px*/
+/* laptop => 1920px*/
+
+@media (max-width:1024px) {
+
+    /* ============  Navbar  ================ */
+    /* media queries for navbar */
+    .navbar > .nav_left > .nav_logo {
+        height: 55px;
+    }
+}
+
+@media (max-width:768px) {
+
+    /* ============  Navbar  ================ */
+    /* media queries for navbar */
+    .navbar {
+        background-color: var(--dominant-color);
+    }
+
+    .navbar > .nav_left > .nav_logo {
+        height: 50px;
+    }
+
+    .navbar > .nav_btn {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .navbar > .nav_btn > label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .navbar > .nav_btn > label > span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 1px solid var(--white-color);
+    }
+
+    .navbar > .nav_links {
+        position: absolute;
+        display: block;
+        background-color: var(--dark-grey-color);
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 80px;
+        left: 0px;
+    }
+
+    .navbar > .nav_links > a {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar > #nav_check:not(:checked) ~ .nav_links {
+        height: 0px;
+      }
+      .navbar > #nav_check:checked ~ .nav_links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+      }
+
+    /* ============  best movie  ================ */
+    /* media queries for best movie */
+    .best_movie_container {
+        height: 600px;
+    }
+    
+    .best_movie_container > .best_movie > .best_movie_img > .best_movie_content {
+        width: 100%;
+        padding-right: 10%;
+    }
+
+    .best_movie_container > .best_movie > .best_movie_img > .best_movie_content > h1{
+        font-size: var(--medium-font-size);
+    }
+
+    /* ============  categories  ================ */
+    /* media queries for best movie */
+    .pre_btn, .next_btn {
+        width: 10%;
+    }
+
+    /* ============  modal  ================ */
+    /* media queries for modal */
+    .modal_style > .modal_content > .modal_header {
+        margin-top: 15% !important;
+      }
+}
