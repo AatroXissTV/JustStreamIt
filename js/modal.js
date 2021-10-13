@@ -37,12 +37,32 @@ function displayMovieModal(movie) {
   let modal_director = document.getElementById("modal_director")
   let modal_actors = document.getElementById("modal_actors")
 
+  convertedDuration = getMovieDuration(movie.duration)
+  checkedBoxOffice = checkBoxOffice(movie.worldwide_gross_income)
+
   modal_title.innerHTML = movie.original_title;
   modal_img.src = movie.image_url;
-  modal_infos.innerHTML = `Genres: ${movie.genres} - ${movie.year} - ${movie.duration}`
-  modal_infos_2.innerHTML = `Country: ${movie.countries} - Box office result: ${movie.worldwide_gross_income}`
+  modal_infos.innerHTML = `Genres: ${movie.genres} - Date Published: ${movie.date_published} - ${convertedDuration}`
+  modal_infos_2.innerHTML = `Countries: ${movie.countries} - Box office result: ${checkedBoxOffice}`
   modal_rating.innerHTML = `Average rating: ${movie.avg_vote} - IMDB score: ${movie.imdb_score}`
   modal_description.innerHTML = `${movie.long_description}`
   modal_director.innerHTML = `Directed by: ${movie.directors}`
   modal_actors.innerHTML = `All actors: ${movie.actors}`
+}
+
+function getMovieDuration(duration) {
+  let hour = parseInt(duration/60)
+    let minute = duration - (hour*60)
+    convertedDuration = `${hour}h${minute}m`
+  return convertedDuration
+}
+
+function checkBoxOffice(results) {
+  if (results == null) {
+    checkedBoxOffice = `no results found`
+  }
+  else {
+    checkedBoxOffice = results
+  }
+  return checkedBoxOffice
 }
