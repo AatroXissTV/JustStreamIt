@@ -4,12 +4,34 @@
 /* Small laptop => 1024px*/
 /* laptop => 1920px*/
 
+@media (max-width:1250px) {
+    .modal_style > .modal_content > .modal_container > .modal_left {
+        width: 40% !important;
+    }
+}
+
 @media (max-width:1024px) {
 
     /* ============  Navbar  ================ */
     /* media queries for navbar */
     .navbar > .nav_left > .nav_logo {
         height: 55px;
+    }
+
+    .modal_style > .modal_content > .modal_container > .modal_right {
+        max-width: 35% !important;
+        height: 50% !important;
+    }
+
+    .modal_style > .modal_content > .modal_container > .modal_left {
+        width: 45% !important;
+    }
+}
+
+@media (max-width:850px) {
+
+    .best_movie_container > .best_movie > .best_movie_img > .best_movie_content {
+        width: 60%;
     }
 }
 
@@ -95,5 +117,13 @@
     /* media queries for modal */
     .modal_style > .modal_content > .modal_header {
         margin-top: 15% !important;
-      }
+    }
+
+    .modal_style > .modal_content > .modal_container > .modal_left {
+        width: 88% !important;
+    }
+
+    .modal_style > .modal_content > .modal_container > .modal_right {
+        display: none;
+    }
 }

@@ -4,7 +4,7 @@
     width: 30%;
     height: 40px;
     margin-top: 40px;
-    margin-right: 20px;
+    margin-right: 10px;
     background: var(--complementary-color);
     color: var(--white-color);
     border-radius: 3px;
@@ -24,12 +24,14 @@
 .info_btn {
     width: 60%;
     height: 40px;
+    margin-top: 40px;
+    margin-left: 10px;
     background: var(--light-grey-color);
     color: var(--dark-grey-color);
     border-radius: 3px;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: var(--title-font);
-    font-size: var(--normal-font-size);
+    font-size: var(--small-font-size);
     font-weight: bolder;
     border: none;
     outline: none;
