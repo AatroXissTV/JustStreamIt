@@ -3,7 +3,7 @@
 
 // Definition of variables
 const number_of_movies = 15
-let categories_list = ["", "animation", "action", "sci-fi"]
+let categories_list = ["", "animation", "fantasy", "sci-fi"]
 let categories_urls = get_categories_urls(categories_list)
 
 
